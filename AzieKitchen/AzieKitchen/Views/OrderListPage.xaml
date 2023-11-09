@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Orders List"
+    x:Class="AzieKitchen.Views.OrderListPage">
+    <ContentPage.Content>
+        <StackLayout Margin="5" >
+            <ListView x:Name="orderListView2" VerticalOptions="Start" HasUnevenRows="True"  ItemSelected="OrderSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Padding="5,15,0,5">
+                                    <Label Text="{Binding OrderId}" FontAttributes="Bold" />
+                                   
+                                    <Label Text="|" />
+                                    <Label Text="{Binding Timestamp}" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

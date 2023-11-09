@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AzieKitchen.Views.AboutPage"
+             xmlns:vm="clr-namespace:AzieKitchen.ViewModels"
+             Title="Home">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+<ContentPage.ToolbarItems> 
+    <ToolbarItem Text="Cart" Clicked="CartClicked"/>
+</ContentPage.ToolbarItems>
+
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+       <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+           <Label Text="" />
+           <Label Text="" />
+          
+
+           <Label Margin="15" Text="Welcome to AzieKitchen Catering, Lets Order!"
+                       FontSize="30"
+                       TextColor="#068F83"
+                       FontAttributes="Bold"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand" />
+             <Label Text="" />
+           <Label Text="" />
+           <Label Text="" />
+     
+        <Image WidthRequest="350" Aspect="AspectFit" Source="alacarte.jpeg">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnImage1Tapped"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Label Text="Ala Carte"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"
+               FontAttributes="Bold"/>
+
+         <Label Text="" />
+             <Label Text="" />
+           <Label Text="" />
+           <Label Text="" />
+        <Image WidthRequest="350" Aspect="AspectFit"  Source="packagemelayu.jpeg">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnImage2Tapped"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Label Text="Package"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"
+               FontAttributes="Bold"/>
+    </StackLayout>
+    </Grid>
+
+</ContentPage>
+

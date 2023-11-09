@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:AzieKitchen.Converters"
+    Title="Cart"
+    x:Class="AzieKitchen.Views.CartPage">
+
+    <ContentPage.Resources>
+        <converters:TruncateValueConverter x:Key="TruncateConverter" />
+        <Style TargetType="Button" x:Key="SmallButtonStyle">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="HeightRequest" Value="20" />
+            <Setter Property="WidthRequest" Value="20" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+
+       
+        <StackLayout Margin="2">
+            
+            <ListView x:Name="cartListView" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Padding="5,15,0,15" Margin="3,10,3,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                                    <Label Text="{Binding Name, Converter={StaticResource TruncateConverter}}" FontAttributes="Bold" />
+                                    <Label Text="|" />
+                                    <Label Text="{Binding Price, StringFormat='RM{0:F2}'}" FontAttributes="Bold" />
+                                    <Label Text="|" />
+                                    <Label Text="{Binding Quantity, StringFormat='Quantity: {0}'}" />
+                                    <Button Text="X" Clicked="DeleteItemClicked" Style="{StaticResource SmallButtonStyle}"/>
+                                </StackLayout>
+                            </StackLayout>
+                               </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+              <ListView.Footer Margin="10">
+                  <StackLayout>
+                      <Label Text=""/>
+    <Frame BorderColor="Gray" CornerRadius="5" Padding="5" Margin="10" WidthRequest="200" HorizontalOptions="End" >
+                <Grid>
+                    <Label x:Name="totalPriceLabel" Text="" FontAttributes="Bold" Padding="10" />
+                </Grid>
+            </Frame>
+                      </StackLayout>
+  </ListView.Footer>          
+             </ListView>
+   
+            
+           <Button FontAttributes="Bold" Text="Checkout" Clicked="CheckoutClicked"  VerticalOptions="EndAndExpand" />
+
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AzieKitchen.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+
+        
+                
+           
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Image Source="AzieKitchen1.jpg" WidthRequest="200" Aspect="AspectFit"></Image>
+            <ContentView Padding="0,20,0,40" VerticalOptions="FillAndExpand">
+                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
+                </ContentView>
+            <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" />
+        <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
+        <Button x:Name="LoginButton" Text="Login" Clicked="OnLoginButtonClicked" />
+        <Label x:Name="ErrorMessageLabel" TextColor="Red" />
+
+           
+            <Button Text="Register" Clicked="OnRegisterButtonClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Place Order"
+    x:Class="AzieKitchen.Views.PlaceOrderPage">
+ <ContentPage.Content>
+        <StackLayout Margin="5" >
+            <ListView x:Name="cartListView2" VerticalOptions="Start" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                       
+                        <ViewCell>
+
+                            
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Padding="5,15,0,15">
+                                    <Label Text="{Binding Name}" FontAttributes="Bold" />
+                                    <Label Text="|" />
+                                    <Label Text="{Binding Price, StringFormat='RM{0:F2}'}" FontAttributes="Bold" />
+                                    <Label Text="|" />
+                                    <Label Text="{Binding Quantity, StringFormat='Quantity: {0}'}" />
+                                    
+                                </StackLayout>
+                            </StackLayout>
+                               
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Footer Margin="10">
+                  <StackLayout>
+                       <Label Text="" />
+                      <Label Text="" />
+                     <Label  Text="Delivery Fee = RM25" HorizontalOptions="End" Padding="1" Margin="1" WidthRequest="200" FontAttributes="Bold"/>
+    <Frame BorderColor="Gray" CornerRadius="5" Padding="5" Margin="15" WidthRequest="200" HorizontalOptions="End" >
+                <Grid>
+                    <Label x:Name="totalPriceLabel" Text="" FontAttributes="Bold" Padding="10" />
+                </Grid>
+            </Frame>
+                      </StackLayout>
+  </ListView.Footer>          
+            </ListView>
+            <Label Text="Address (Klang Valley Only): "  Margin="15,0,0,0"/>
+            <Frame BorderColor="Gray" CornerRadius="5" Padding="5" Margin="15,0,10,0">
+           <Editor x:Name="addressEditor" Placeholder="Enter your address here"
+                    HeightRequest="100"
+                        WidthRequest="500"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"/>
+                </Frame>
+
+            <Label Margin="15,0,0,0" Text="After placing order, staff will confirm order and payment via Whatsapp."  VerticalOptions="EndAndExpand" />
+             <Button FontAttributes="Bold" Text="PlaceOrder" Clicked="PlaceOrderclicked"  VerticalOptions="EndAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

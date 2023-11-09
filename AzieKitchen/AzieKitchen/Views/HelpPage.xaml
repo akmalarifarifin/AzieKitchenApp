@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Help"
+    x:Class="AzieKitchen.Views.HelpPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="AzieKitchenLogo.jpg" WidthRequest="250" Aspect="AspectFit" />
+            <Frame BorderColor="Black" BackgroundColor="White" Padding="10" Margin="10" WidthRequest="180">
+                <StackLayout>
+                <Label Text="Contact with AzieKitchen staff:"
+                       FontSize="20"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+                    <Label Text=""/>
+                    <Label Text=""/>
+                    <Label Text=""/>
+
+                <Label LineBreakMode="WordWrap" Text="017-1324213 (Bangi Branch)"
+                       FontSize="16"
+                       TextColor="Black"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+                     <Label Text="0323432411 (Putrajaya)"
+                       FontSize="16"
+                       TextColor="Black"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+
+                     <Label Text=""/>
+                    <Label Text=""/>
+                    <Label Text=""/>
+                     <Label Text=""/>
+                    
+
+                    <Label Text="Click to WhatsApp!" VerticalOptions="Center"
+       TextColor="Blue"
+                           FontSize="18"
+                           HorizontalOptions="Center"
+       FontAttributes="Bold">
+    <Label.GestureRecognizers >
+        <TapGestureRecognizer Tapped="OnWhatsAppTapped" />
+    </Label.GestureRecognizers>
+</Label>
+                     <Label Text=""/>
+                    <Label Text=""/>
+                    <Label Text=""/>
+                     <Label Text=""/>
+
+                    <Label Text="or Email us at:"
+                       FontSize="16"
+                       TextColor="Black"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+                     <Label Text="aziekitchen@gmail.com"
+                       FontSize="16"
+                       TextColor="Black"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+                    </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

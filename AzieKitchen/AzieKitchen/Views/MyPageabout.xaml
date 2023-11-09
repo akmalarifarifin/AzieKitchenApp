@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="About Us"
+    x:Class="AzieKitchen.Views.MyPageabout">
+    <ContentPage.Content>
+        <StackLayout>
+           <Image Source="AzieKitchenLogo.jpg" WidthRequest="200" Aspect="AspectFit" />
+
+            <Label FontSize="20" WidthRequest="350" HorizontalOptions="CenterAndExpand" Text="Welcome to AzieKitchen, the catering restaurant that offers a diverse range of delicious Malay, Chinese, and Western cuisine. Our restaurant is located in the heart of Bangi, offering a cozy and welcoming ambiance that complements the delightful flavors of our dishes. We take pride in providing top-quality catering services to our customers in the Klang Valley area, using only the freshest and finest ingredients in every dish we serve. Whether you're planning a corporate event, family gathering, or special occasion, AzieKitchen is committed to making your event a success with our exceptional culinary expertise and excellent customer service. Thank you for choosing AzieKitchen, and we look forward to serving you soon!" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
